@@ -3,7 +3,7 @@ const { db } = require('./firebase');
 
 const CONVERSATION_DATA_PROPERTY = "CONVERSATION_DATA_PROPERTY"
 
-class BotTriagem extends ActivityHandler {
+class BotExemplo extends ActivityHandler {
     constructor(conversationState) {
         super();
 
@@ -148,6 +148,8 @@ class BotTriagem extends ActivityHandler {
             return
         }
 
+        // Aqui vai o código do seu bot :) Divirta-se
+
         await this.docDbData.ref.update({
             userData: this.userData,
             conversationData: this.conversationData,
@@ -179,4 +181,4 @@ class BotTriagem extends ActivityHandler {
     }
 }
 
-module.exports.BotTriagem = BotTriagem;
+module.exports.BotExemplo = BotExemplo;

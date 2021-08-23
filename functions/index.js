@@ -36,9 +36,9 @@ mutantWhatsAdapter.onTurnError = async (context, error) => {
 const memoryStorage = new MemoryStorage();
 const conversationState = new ConversationState(memoryStorage);
 
-const { BotTriagem } = require('./bot');
+const { BotExemplo } = require('./bot');
 
-const bot = new BotTriagem(conversationState)
+const bot = new BotExemplo(conversationState)
 
 server.post('/start-conversation', async (req, res) => {
     await mutantWhatsAdapter.processActivity(req, res, "start-conversation", async (context) => {
